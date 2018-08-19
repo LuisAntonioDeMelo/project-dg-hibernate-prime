@@ -46,12 +46,12 @@
 			<artifactId>postgresql</artifactId>
 			<version>42.2.4</version>
 		</dependency>
-
 		<dependency>
-			<groupId>com.sun.faces</groupId>
-			<artifactId>jsf-impl</artifactId>
+			<groupId>org.glassfish</groupId>
+			<artifactId>javax.faces</artifactId>
 			<version>2.2.12</version>
 		</dependency>
+
 
 
 	</dependencies>
