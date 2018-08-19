@@ -14,6 +14,8 @@ public class HibernateUtil {
 				Configuration config = new Configuration().configure();
 				ServiceRegistry service = new StandardServiceRegistryBuilder().applySettings(config.getProperties()).build();
 				factory = config.buildSessionFactory(service);
+				System.out.println("#############   Iniciado Job   ############");
+				System.out.println("##########-----------------------############");
 			}
 			
 		}catch(Throwable e) {

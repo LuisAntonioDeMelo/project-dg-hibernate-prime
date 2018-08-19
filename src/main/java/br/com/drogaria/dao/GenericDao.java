@@ -13,6 +13,7 @@ import br.com.drogaria.util.HibernateUtil;
 public class GenericDao <T> {
 	private Class<T> classe;
 	public GenericDao() {	
+		//java reflection
 		this.classe = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
 	}
 	

@@ -33,12 +33,6 @@ public class Cidade extends GenericDomain{
 		this.estado = estado;
 	}
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-
-	
-	
 	
 
 }
