@@ -10,6 +10,11 @@ public class Pessoa extends GenericDomain {
 
 	private static final long serialVersionUID = -6280845588219102342L;
 	
+	@ManyToOne
+	@JoinColumn(nullable = false)
+	private Cidade cidade;
+
+	
 	@Column(length = 50, nullable = false)
 	private String nome;
 	
@@ -28,16 +33,16 @@ public class Pessoa extends GenericDomain {
 	@Column(length = 50, nullable = false)
 	private String bairro;
 	
-	@Column(length = 50, nullable = false)
+	@Column(length = 50)
 	private String complemento;
 	
 	@Column(length = 15, nullable = false)
 	private String telefone;
 	
-	@Column(length = 15, nullable = false)
+	@Column(length = 25, nullable = false)
 	private String celular;
 	
-	@Column(length = 20, nullable = false)
+	@Column(length = 30, nullable = false)
 	private String email;
 
 	public String getNome() {
@@ -128,8 +133,5 @@ public class Pessoa extends GenericDomain {
 		this.cidade = cidade;
 	}
 
-	@ManyToOne
-	@JoinColumn(nullable = false)
-	private Cidade cidade;
 
 }
