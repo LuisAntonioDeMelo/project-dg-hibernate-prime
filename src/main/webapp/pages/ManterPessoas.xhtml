@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:mj="http://mojarra.dev.java.net/mojarra_ext"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+	<title>Cadastro de Pessoas</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css"
+		href="${pageContext.request.contextPath}css/style.css" />
+</h:head>
+<h:body>
+	<h:dataTable value="#{pessoaCtrl.listar}" var="func" border="1">
+		<h:column>
+			<f:facet name="header">
+				<h:outputText value="Nome" />
+			</f:facet>
+			<h:outputText value="#{func.nome}" />
+		</h:column>
+		<h:column>
+			<h:outputText value="#{func.email}" />
+		</h:column>
+	</h:dataTable>
+
+
+
+	<section class="one"> <h:form>
+
+		<div class="divs">
+			<h3>Cadastro de Pessoa</h3>
+			<div class="groupDiv">
+				<h:outputLabel value="Nome : " styleClass="format" />
+				<div class="format">
+					<h:inputText value="#{pessoaCtrl.pessoa.nome}" />
+				</div>
+
+			</div>
+		</div>
+
+		<div class="divs">
+			<div class="groupDiv">
+				<h:outputLabel value="Cpf : " />
+				<div class="format">
+					<h:inputText value="#{pessoaCtrl.pessoa.cpf}" />
+				</div>
+
+			</div>
+		</div>
+
+		<div class="divs">
+			<div class="groupDiv">
+				<h:outputLabel value="Emai : " />
+				<div class="format">
+					<h:inputText value="#{pessoaCtrl.pessoa.email}" />
+				</div>
+
+			</div>
+		</div>
+		<div class="divs">
+			<div class="groupDiv">
+				<h:outputLabel value="Cidade : " />
+				<div class="format">
+					<h:inputText value="#{pessoaCtrl.pessoa.cidade}" />
+				</div>
+			</div>
+		</div>
+
+		<div class="divs">
+			<div class="groupDiv">
+				<h:outputLabel value=" Rua :" />
+				<div class="format">
+					<h:inputText value="#{pessoaCtrl.pessoa.rua}" />
+				</div>
+			</div>
+		</div>
+
+		<div class="divs">
+			<div class="groupDiv">
+				<h:outputLabel value="Bairro :" />
+				<div class="format">
+					<h:inputText value="#{pessoaCtrl.pessoa.bairro}" />
+				</div>
+
+			</div>
+		</div>
+
+		<div class="divs">
+			<div class="groupDiv">
+				<h:outputLabel value="Número :" />
+				<div class="format">
+					<h:inputText value="#{pessoaCtrl.pessoa.numero}" />
+				</div>
+			</div>
+		</div>
+
+		<div class="divs">
+			<div class="groupDiv">
+				<h:outputLabel value="Rg :" />
+				<div class="format">
+					<h:inputText value="#{pessoaCtrl.pessoa.rg}" />
+				</div>
+
+			</div>
+		</div>
+
+		<div class="divs">
+			<div class="groupDiv">
+				<h:outputLabel value="Telefone :" />
+				<div class="format">
+					<h:inputText value="#{pessoaCtrl.pessoa.telefone}" />
+				</div>
+			</div>
+		</div>
+
+		<div class="divs">
+			<div class="groupDiv">
+				<h:outputLabel value="Celular :" />
+				<div class="format">
+					<h:inputText value="#{pessoaCtrl.pessoa.celular}" />
+				</div>
+			</div>
+		</div>
+		<div class="divs">
+			<div class="groupDiv">
+				<h:outputLabel value="Complemento :" />
+				<div class="format">
+					<h:inputText value="#{pessoaCtrl.pessoa.complemento}" />
+				</div>
+			</div>
+		</div>
+
+		<div class="divs">
+			<h:commandButton actionListener="#
+		{pessoaCtrl.adicionar()}"
+				value="salvar" onclick="funcs();" />
+		</div>
+	</h:form> </section>
+	<script>
+	function funcs(){
+		alert('itens salvos');
+
+		}
+
+</script>
+</h:body>
+</html>

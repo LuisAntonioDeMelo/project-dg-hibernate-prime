@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:mj="http://mojarra.dev.java.net/mojarra_ext"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Cidades</title>
+</h:head>
+<h:body>
+	<h:form>
+		<p:panel header="Cidades - Listagem">
+			<p:dataTable emptyMessage="Nenhum registro encontrado!"
+				paginator="true">
+				<p:column headerText="Nome" sortBy="" filterBy="">
+				</p:column>
+				<p:column headerText="Estado">
+				</p:column>
+				<p:column headerText="Opções">
+				</p:column>
+				<f:facet name="footer">
+					<p:commandButton value="Novo" oncomplete="PF('dialogo').show();"></p:commandButton>
+				</f:facet>
+			</p:dataTable>
+		</p:panel>
+	</h:form>
+	<p:dialog header="Cidades  cadastro" widgetVar="dialogo"
+		draggable="false" resizable="false" modal="true">
+		<h:panelGrid columns="2">
+			<p:outputLabel> Nome  </p:outputLabel>
+			<p:inputText size="50" maxlength="20"></p:inputText>
+			<p:outputLabel> Estado  </p:outputLabel>
+			<p:selectOneMenu filter="true">
+			
+			</p:selectOneMenu>
+		</h:panelGrid>
+		<h:panelGrid columns="2">
+			<p:commandButton value="salvar"></p:commandButton>
+			<p:commandButton value="fechar"  oncomplete="PF('dialogo').hide();"></p:commandButton>
+		</h:panelGrid>
+	</p:dialog>
+
+</h:body>
+</html>

@@ -99,4 +99,21 @@ public class GenericDao <T> {
 		}
 
 	}
+	
+	public void merge(T entidade) {
+		Session sessao = HibernateUtil.getSession().openSession();
+		Transaction transacao = null;
+		try {
+			transacao = sessao.beginTransaction();
+			sessao.merge(entidade);
+			transacao.commit();
+		}catch(Throwable e) {
+			if(transacao != null) {
+				transacao.rollback();
+			}
+			e.printStackTrace();
+		}finally {
+			sessao.close();
+		}
+	}
 }

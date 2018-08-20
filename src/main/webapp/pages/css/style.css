@@ -1,0 +1,19 @@
+
+
+.groupDiv {
+	margin:2px;
+	padding: 10px;
+	background: #eee;
+	width:300px
+}
+
+.divs{
+	display: inline-block;
+	margin: 0.2em;
+	padding: 0.2em;
+}
+
+
+.format {	
+	padding-right: 4%;
+}
